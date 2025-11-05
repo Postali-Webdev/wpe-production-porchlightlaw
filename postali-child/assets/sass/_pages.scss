@@ -1,0 +1,214 @@
+/**
+ * Page Template Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+*/
+
+.blog,
+.category,
+.archive,
+.search {
+    .post-holder {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+         
+        &:not(:last-of-type) {
+            margin-bottom:40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .column-50 {
+            width:48%;
+
+            @media screen and (max-width:$screen-sm) {
+                width:100%;
+            }
+        }
+
+        .blog-photo {
+            background-size: cover !important;
+            background-position: center !important;
+
+            @media screen and (max-width:$screen-sm) {
+                min-height: 300px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.single {
+    .blog-post {
+        padding: 0;
+        
+        #single-post {
+            h1 {
+                font-family: $sans;
+                font-size: 38px;
+                line-height: 140%;
+                color: $blue;
+                text-transform: none;
+                margin-bottom: 0;
+                font-weight: normal;
+                margin-top: 0;
+            }
+
+            h2 {
+                color:$blue;
+                font-size: 30px;
+                font-weight: 400;
+            }
+
+            .post-meta {
+                &::after {
+                    display:none;
+                }
+            }
+
+            .video {
+                margin-bottom: 40px;
+            }
+        }
+
+        .main-sidebar {
+            align-self: start;
+            justify-self: stretch;
+            border-left: 1px solid #efefef;
+            padding-left: 30px;
+            height: 100%;
+
+            span.widget-title {
+                padding: 0;
+                color: $blue;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                display: block;
+                font-family: $sans;
+                font-size: 22px;
+                line-height: 110%;
+                text-transform: none;
+            }
+
+            .sidebar-widget ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        line-height: 130%;
+                        color:#666;
+                        display: block;
+
+                        &:hover {
+                            color:$yellow;
+                        }
+                    }
+                }
+            }
+
+            select {
+                background: none;
+                border: 1px solid #bbb;
+                padding: 5px 10px 5px;
+                width: 100%;
+                font-size: 15px;
+                color:#4e4e4e;
+                box-sizing: border-box;
+                -webkit-appearance: none !important;
+            }
+
+            .search {
+                border: 1px solid #bbb;
+
+                input {
+                    border: none;
+                    padding: 5px 10px;
+                    color: #4e4e4e;
+                    font-size: 14px;
+                    width:75%;
+                    box-sizing: border-box;
+                }
+
+                button {
+                    margin-left: -4px;
+                    border-radius: 0;
+                    border: none;
+                    height: 31px;
+                    width: 25%;
+                }
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            grid-column-gap: 50px;
+            padding-bottom: 0;
+
+            @media screen and (max-width:$screen-sm) {
+                display:flex;
+                width:100%;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+.page-template-page-contact {
+    #gform_submit_button_1 {
+        border: none;
+        background: $yellow;
+        padding: 15px 40px;
+        border-radius: 50px;
+        line-height: 100%;
+        color: $blk;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        cursor: pointer;
+        transition: $trans;
+
+        &:hover {
+            color:$white;
+            background:$blue;
+        }
+    }
+
+    .gfield input.large,
+    .gfield textarea {
+        padding: 14px !important;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid gray;
+        box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
+    }
+
+    .sidebar {
+        .icon-phone-icon {
+            font-size: 14px;
+            margin-right: 6px;
+            color:$yellow;
+        }
+    
+        .icon-email-icon {
+            font-size: 15px;
+            margin-right: 4px;
+            color:$yellow;
+        }
+    }
+}
+
+.page-template-page-interior {
+    @media screen and (max-width:$screen-xxs) {
+        img.alignright {
+            float: none;
+            margin: 30px 0;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,250 @@
+/**
+ * Template Front Page Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+.home {
+    .page-banner {
+        min-height: 325px !important;
+        background-position: center top !important;
+
+        h1 {
+            margin:50px 0 0 0;
+        }
+        
+        .container {
+            .columns {
+                .column-full {
+                    justify-content: center;
+    
+                    h1 {
+                        text-align: center;
+                        
+                        sup {
+                            font-size: 50%;
+                            margin-left: 10px;
+                            font-weight: 400 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+}
+
+.hp-services {
+    padding-top: 80px;
+    
+    h2 {
+        position: relative;
+        margin-bottom: 50px;
+        
+        &::after {
+            height: 5px;
+            background: $yellow;
+            content: "";
+            width: 50%;
+            left: 0;
+            display: block;
+            position: absolute;
+            bottom: -20px;
+        }
+    }
+
+    .services-blocks {
+        width: 100%;
+        border-right: 1px solid $blue;
+        border-top: 1px solid $blue;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: normal;
+
+        @media screen and (max-width:$screen-sm) {
+            border-top: 1px solid $blue;
+            margin-top: 50px;
+        }
+
+        .services-block {
+            width: 50%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 1px solid $blue;
+            border-bottom: 1px solid $blue;
+            padding:25px;
+
+            &:hover {
+                p.large {
+                    border-bottom: 2px solid $yellow;
+                }
+            }
+
+            @media screen and (max-width:$screen-xs) {
+                width:100%;
+            }
+
+            .service-icon {
+                width: 65px;
+
+                img {
+                    max-width: 50px;
+                }
+            }
+
+            .service-content {
+                width: calc(100% - 75px);
+                display: flex;
+                flex-wrap: wrap;
+              }
+
+            p {
+                padding: 0;
+                margin:0;
+                font-size: 26px;
+                display:inline-block;
+                width:auto;
+                color:$dk-blue;
+                font-weight: bold;
+                border-bottom: 2px solid transparent;
+
+                &.small {
+                    width:100% !important;
+                }
+            }
+        }
+    }
+}
+
+.hp-testimonials {
+    @include blue-gradient;
+
+    h2, p {
+        color:$white;
+    }
+    
+    h2 {
+        position: relative;
+        
+        &::after {
+            height: 5px;
+            background: $white;
+            content: "";
+            width: 70%;
+            left: 15%;
+            display: block;
+            position: absolute;
+            bottom: -20px;
+          }
+    }
+
+    .icon-quote-icon {
+        margin: 0 auto 25px;
+        font-size: 40px;
+        color: white;
+    }
+
+    .columns {
+        align-items: normal;
+
+        .testimonial {
+            padding-left: 30px;
+            position: relative;
+    
+            &::before {
+                position: absolute;
+                left:-30px;
+                width: 5px;
+                content: "";
+                height:calc(100% - 120px);
+                top:80px;
+                background:$yellow;
+
+                @media screen and (max-width:$screen-sm) {
+                    left:-10px;
+                }
+            }
+        }
+    }
+}
+
+.hp-about {
+    h2 {
+        position: relative;
+        margin-bottom: 50px;
+        
+        &::after {
+            height: 5px;
+            background: $yellow;
+            content: "";
+            width: 50%;
+            left: 0;
+            display: block;
+            position: absolute;
+            bottom: -20px;
+        }
+    }
+}
+
+.hp-awards {
+    @include blue-gradient;
+
+    .columns {
+        align-items: normal;
+
+        @media screen and (max-width:$screen-md) {
+            justify-content:center;
+        }
+
+        .award-img {
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            @media screen and (max-width:$screen-md) {
+                margin:5%;
+                width:20%;
+            }
+
+            @media screen and (max-width:$screen-sm) {
+                margin:5%;
+                width:40%;
+            }
+
+            @media screen and (max-width:$screen-xs) {
+                margin:5% 0;
+                width:100%;
+            }
+
+            img {
+                max-height: 180px;
+            }
+        }
+    }
+
+    h2, p {
+        color:$white;
+    }
+    
+    h2 {
+        position: relative;
+        
+        &::after {
+            height: 5px;
+            background: $white;
+            content: "";
+            width: 70%;
+            left: 15%;
+            display: block;
+            position: absolute;
+            bottom: -20px;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+body, h1, h2, h3, h4, h5, h6, p, a, ul {
+    // color: $body-text-color;
+} 
+p, a, ul, ol {
+
+}
+ul li, ol li {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+}
+dl, blockquote, img {
+
+}
+
+a {
+    text-decoration:none;
+    transition:$trans;
+    &:hover {
+        // color:$lt-red;
+        text-decoration:none;
+    }
+}
+
+.btn {
+    display:inline-flex;
+    align-items: center;
+    padding:10px 40px;
+    text-decoration:none;
+    transition:$trans;
+    background:$yellow;
+    font-size: 16px;
+    line-height: 110%;
+    border-radius: 50px;
+    height:auto;
+    color:$blk !important;
+
+    &:hover {
+        background:$blue;
+        scale: .98;
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.2);
+        color:$white !important;
+    }
+
+    &.read-more {
+        
+    }
+}
+
+p {
+    font-size:18px;
+    line-height: 150%;
+    margin:0 0 30px;
+    font-family: $sans;
+
+    &.large {
+        font-size: 24px;
+        margin-bottom: 15px;
+        line-height: 120%;
+    }
+
+    &.small {
+        font-size: 15px !important;
+    }
+
+    &.blue {
+        color:$blue !important;
+    }
+
+    &.yellow {
+        color:$yellow;
+    }
+
+    &#breadcrumbs {
+        padding: 0;
+        font-weight: 600;
+        font-size: 14px;
+        font-weight: 400;
+
+        a {
+            color: $blue;
+        }
+    }
+
+    a {
+        font-family: inherit;
+        font-size: inherit;
+        color:$yellow !important;
+        transition:$trans;
+        
+        &:hover {
+            color:$blue !important;
+        }
+    }
+}
+
+h2 {
+    color:$blue;
+    font-size: 30px;
+    font-family: $sans;
+    font-weight: 700 !important;
+    margin: 0 0 20px;
+
+}
+
+a {
+    h2 {
+        transition: $trans;
+        color:$blue;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+h3 {
+    color:$blk;
+    font-size: 20px;
+    font-family: $sans;
+    font-weight: 700 !important;
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+}
